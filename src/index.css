@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  
+  --color-forest: #174D38;
+  --color-forest-dark: #0D3022;
+  --color-forest-light: #23654B;
+  --color-ivory: #F8F7F2;
+  --color-ivory-light: #FCFCF9;
+  --color-charcoal: #202923;
+  --color-charcoal-light: #36423A;
+  --color-gold: #B59A63;
+  --color-gold-light: #D5C299;
+  --color-gold-dark: #967C46;
+  --color-sage: #E4EAE0;
+  --color-sage-light: #F0F4ED;
+  --color-sage-dark: #C9D5C3;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #F8F7F2;
+  color: #202923;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Precise anchor offset for sticky header */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Subtle focus ring style for accessibility */
+:focus-visible {
+  outline: 2px solid #174D38;
+  outline-offset: 3px;
+}
+
+/* Custom editorial typography styles */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+/* Noise & grain texture simulation (very subtle) */
+.bg-grain {
+  background-image: radial-gradient(rgba(32, 41, 35, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Selection */
+::selection {
+  background-color: #174D38;
+  color: #F8F7F2;
+}
